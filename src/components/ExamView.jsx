@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import QuestionItem from './QuestionItem.jsx';
+import ResetSectionButton from './ResetSectionButton.jsx';
 import { storage } from '../storage';
 
 export default function ExamView({ exam, chapters, config }) {
@@ -9,6 +10,8 @@ export default function ExamView({ exam, chapters, config }) {
 
   const [state, setState] = useState({});
   const [tick, setTick] = useState(0);
+  // Bumped only by the exam reset, to force the mounted questions to remount.
+  const [resetNonce, setResetNonce] = useState(0);
   const [timeLeft, setTimeLeft] = useState(timeLimitMin * 60);
   const [timerRunning, setTimerRunning] = useState(false);
 
@@ -97,6 +100,17 @@ export default function ExamView({ exam, chapters, config }) {
             <div className="h-full bg-gradient-to-r from-indigo-500 to-emerald-500" style={{ width: `${(answered.length / total) * 100}%` }} />
           </div>
         </div>
+        <ResetSectionButton
+          prefix="studyguide:exam:q"
+          label="Reset exam"
+          note={`Clear all ${total} exam answers and notes?`}
+          onReset={() => {
+            setResetNonce((n) => n + 1);
+            setTick((t) => t + 1);
+            setTimeLeft(timeLimitMin * 60);
+            setTimerRunning(false);
+          }}
+        />
       </div>
 
       {done && (
@@ -124,7 +138,7 @@ export default function ExamView({ exam, chapters, config }) {
 
       {exam.map((q, i) => (
         <QuestionItem
-          key={i}
+          key={`studyguide:exam:q${i}#${resetNonce}`}
           storageKey={`studyguide:exam:q${i}`}
           q={q}
           index={i}

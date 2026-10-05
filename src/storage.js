@@ -32,6 +32,16 @@ export async function loadAll(prefix) {
 }
 
 export async function resetAll() {
+  return resetPrefix('studyguide:');
+}
+
+/**
+ * Remove every stored key beginning with `prefix`.
+ * Used for per-section resets, e.g. 'studyguide:ch2:q' clears only
+ * Chapter 2's practice answers (and their notes), leaving blocks alone.
+ */
+export async function resetPrefix(prefix) {
+  if (!prefix) return;
   const all = await storage.keys();
-  await Promise.all(all.filter((k) => k.startsWith('studyguide:')).map((k) => storage.remove(k)));
+  await Promise.all(all.filter((k) => k.startsWith(prefix)).map((k) => storage.remove(k)));
 }

@@ -24,13 +24,26 @@ export default function CommentBox({ storageKey, label = 'Note', onChange }) {
   const [open, setOpen] = useState(false);
   const [, forceRerender] = useState(0);
 
+  // Always resolve to a definite state — clearing when nothing is stored keeps
+  // a note from one chapter off a reused component in another.
   useEffect(() => {
+    let cancelled = false;
     (async () => {
       const t = await storage.get(commentKey);
       const ts = await storage.get(tsKey);
-      if (t) { setText(t); setSavedText(t); setOpen(true); }
-      if (ts) setSavedTs(ts);
+      if (cancelled) return;
+      if (t) {
+        setText(t);
+        setSavedText(t);
+        setOpen(true);
+      } else {
+        setText('');
+        setSavedText('');
+        setOpen(false);
+      }
+      setSavedTs(ts || null);
     })();
+    return () => { cancelled = true; };
   }, [commentKey, tsKey]);
 
   // Auto-update "time ago" every 30s

@@ -21,16 +21,27 @@ export default function QuestionItem({ storageKey, q, index, onAnswered }) {
   const [submitted, setSubmitted] = useState(false);
   const [correct, setCorrect] = useState(null);
 
+  // Load this question's saved answer. ALWAYS resolve to a definite state:
+  // if nothing is stored we must clear, otherwise a previous question's answer
+  // bleeds through when React reuses this component for a different storageKey.
   useEffect(() => {
+    let cancelled = false;
     (async () => {
       const saved = await storage.get(storageKey);
+      if (cancelled) return; // a newer storageKey won the race
       if (saved && typeof saved === 'object') {
         setSelected(saved.selected ?? null);
         setFreeText(saved.freeText ?? '');
         setSubmitted(!!saved.submitted);
         setCorrect(saved.correct ?? null);
+      } else {
+        setSelected(null);
+        setFreeText('');
+        setSubmitted(false);
+        setCorrect(null);
       }
     })();
+    return () => { cancelled = true; };
   }, [storageKey]);
 
   const gradeShort = (answer, key) => {

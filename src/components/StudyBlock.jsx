@@ -20,13 +20,18 @@ export default function StudyBlock({ chapterId, block, onStateChange }) {
   const [reviewed, setReviewed] = useState(false);
   const [confidence, setConfidence] = useState(0);
 
+  // Always resolve to a definite state so a reviewed/confidence value from one
+  // block never carries over to another.
   useEffect(() => {
+    let cancelled = false;
     (async () => {
       const r = await storage.get(reviewedKey);
       const c = await storage.get(confKey);
-      if (r) setReviewed(!!r);
-      if (c != null) setConfidence(Number(c) || 0);
+      if (cancelled) return;
+      setReviewed(!!r);
+      setConfidence(c != null ? Number(c) || 0 : 0);
     })();
+    return () => { cancelled = true; };
   }, [reviewedKey, confKey]);
 
   const toggleReviewed = async () => {

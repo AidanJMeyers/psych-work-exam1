@@ -160,7 +160,9 @@ export default function App() {
         ) : active === 'review' ? (
           <ReviewLaterView chapters={chapters} exam={exam} onNavigate={navigate} />
         ) : currentChapter ? (
-          <ChapterView chapter={currentChapter} />
+          // Keyed by chapter so switching chapters mounts a fresh view rather
+          // than reusing the previous chapter's component state.
+          <ChapterView key={currentChapter.id} chapter={currentChapter} />
         ) : (
           <div className="p-10 text-slate-500">Select a chapter.</div>
         )}

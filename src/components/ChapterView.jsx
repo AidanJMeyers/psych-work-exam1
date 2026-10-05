@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import StudyBlock, { confidenceColors } from './StudyBlock.jsx';
 import QuestionItem from './QuestionItem.jsx';
 import KeyReview from './KeyReview.jsx';
+import ResetSectionButton from './ResetSectionButton.jsx';
 import { storage } from '../storage';
 
 const SUBTABS = [
@@ -16,6 +17,9 @@ export default function ChapterView({ chapter }) {
   const [confState, setConfState] = useState({});
   const [qState, setQState] = useState({});
   const [tick, setTick] = useState(0);
+  // Bumped only by the practice reset. Folded into each question's key so the
+  // already-mounted QuestionItems remount and re-read the (now empty) storage.
+  const [resetNonce, setResetNonce] = useState(0);
 
   useEffect(() => {
     let cancel = false;
@@ -124,11 +128,19 @@ export default function ChapterView({ chapter }) {
                 <div className="text-2xl font-bold text-sky-600">{answeredCount ? Math.round((correctCount/answeredCount)*100) : 0}%</div>
                 <div className="text-xs text-slate-500">Score</div>
               </div>
+              <ResetSectionButton
+                prefix={`studyguide:ch${chapter.id}:q`}
+                label="Reset answers"
+                note={`Clear all ${chapter.questions.length} answers and notes for Chapter ${chapter.id}?`}
+                onReset={() => { setResetNonce((n) => n + 1); setTick((t) => t + 1); }}
+              />
             </div>
           </div>
           {chapter.questions.map((q, i) => (
             <QuestionItem
-              key={i}
+              // Key by the storage key, not the index, so switching chapters
+              // remounts each question instead of reusing the previous one.
+              key={`studyguide:ch${chapter.id}:q${i}#${resetNonce}`}
               storageKey={`studyguide:ch${chapter.id}:q${i}`}
               q={q}
               index={i}
