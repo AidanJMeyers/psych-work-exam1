@@ -3,7 +3,7 @@ import QuestionItem from './QuestionItem.jsx';
 import ResetSectionButton from './ResetSectionButton.jsx';
 import { storage } from '../storage';
 
-export default function ExamView({ exam, chapters, config }) {
+export default function ExamView({ exam, chapters, config, storagePrefix = 'studyguide:exam:q' }) {
   const passThreshold = config?.passThreshold ?? 70;
   const timed = config?.timed ?? false;
   const timeLimitMin = config?.timeLimitMin ?? 60;
@@ -19,11 +19,11 @@ export default function ExamView({ exam, chapters, config }) {
     (async () => {
       const s = {};
       await Promise.all(exam.map(async (_, i) => {
-        s[i] = await storage.get(`studyguide:exam:q${i}`);
+        s[i] = await storage.get(`${storagePrefix}${i}`);
       }));
       setState(s);
     })();
-  }, [tick, exam]);
+  }, [tick, exam, storagePrefix]);
 
   useEffect(() => {
     if (!timerRunning || !timed) return;
@@ -101,7 +101,7 @@ export default function ExamView({ exam, chapters, config }) {
           </div>
         </div>
         <ResetSectionButton
-          prefix="studyguide:exam:q"
+          prefix={storagePrefix}
           label="Reset exam"
           note={`Clear all ${total} exam answers and notes?`}
           onReset={() => {
@@ -138,8 +138,8 @@ export default function ExamView({ exam, chapters, config }) {
 
       {exam.map((q, i) => (
         <QuestionItem
-          key={`studyguide:exam:q${i}#${resetNonce}`}
-          storageKey={`studyguide:exam:q${i}`}
+          key={`${storagePrefix}${i}#${resetNonce}`}
+          storageKey={`${storagePrefix}${i}`}
           q={q}
           index={i}
           onAnswered={() => setTick((t) => t + 1)}

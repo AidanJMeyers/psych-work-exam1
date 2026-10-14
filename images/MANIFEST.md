@@ -171,3 +171,22 @@ These are chapter-opener stock photography, sidebar narrative boxes ("Workplace 
 | ch06_p231_fig_2.png | unused/ch06_p231_fig_2.png | p.231 |
 | ch06_p232_fig.png | unused/ch06_p232_fig.png | p.232 |
 | ch06_p233_fig.png | unused/ch06_p233_fig.png | p.233 |
+
+
+---
+
+## Chapter 8 — Training and Development (Exam 2)
+
+Extracted with the same 3x page-vector render. Figure 8.3 is a text-only diagram in the
+PDF (no vector or raster objects), so its region was rendered directly by bounding box.
+
+| Original | Destination | PDF page | Rationale |
+|---|---|---|---|
+| ch08_p287_Figure_8_1.png | ch08_training_development/08a_fig8-1_training_spend_per_employee.png | p.287 | Figure 8.1 - annual average dollars spent per employee on training; anchors 'Why Training Matters' |
+| ch08_p289_Figure_8_2.png | ch08_training_development/08b_fig8-2_training_process.png | p.289 | Figure 8.2 - the four-step training process; anchors 'The Training Process' |
+| ch08_p291_Figure_8_3.png | ch08_training_development/08c_fig8-3_needs_assessment_overview.png | p.291 | Figure 8.3 - the four analyses of a needs assessment; anchors 'Training Needs Assessment' |
+| ch08_p294_Figure_8_4.png | ch08_training_development/08d_fig8-4_characteristics_to_motivation.png | p.294 | Figure 8.4 - individual + organizational characteristics -> training motivation -> outcomes; anchors 'Trainee & Context' |
+| ch08_p298_Table_8_1.png | ch08_training_development/08e_table8-1_transfer_recommendations.png | p.298 | Table 8.1 - recommendations for ensuring transfer after training; anchors 'Transfer of Training' |
+| ch08_p299_Figure_8_5.png | ch08_training_development/08f_fig8-5_smart_goals.png | p.299 | Figure 8.5 - SMART goals in training; anchors 'Trainee Motivation' |
+| ch08_p303_Figure_8_6.png | ch08_training_development/08g_fig8-6_decay_of_learning.png | p.303 | Figure 8.6 - decay of learning over time (baseline, post-training, six months); anchors 'Learning Principles' |
+| ch08_p315_Figure_8_7.png | ch08_training_development/08h_fig8-7_kirkpatrick_four_levels.png | p.315 | Figure 8.7 - Kirkpatrick's four levels of training criteria; anchors 'Evaluating Training' |

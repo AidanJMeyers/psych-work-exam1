@@ -6,7 +6,7 @@ import { storage } from '../storage';
  * a saved comment. Groups by chapter. Lets user click through to the item
  * and export everything as Markdown.
  */
-export default function ReviewLaterView({ chapters, exam, onNavigate }) {
+export default function ReviewLaterView({ chapters, units = [], onNavigate }) {
   const [notes, setNotes] = useState([]);
 
   const load = async () => {
@@ -33,8 +33,9 @@ export default function ReviewLaterView({ chapters, exam, onNavigate }) {
       const blockId = chBlock[2];
       const ch = chapters.find((c) => c.id === chId);
       const block = ch?.blocks.find((b) => b.id === blockId);
+      const owner = units.find((u) => u.chapters.some((c) => c.id === chId));
       return {
-        group: ch?.title || `Chapter ${chId}`,
+        group: `${owner ? owner.label + ' · ' : ''}Ch ${chId} — ${ch?.title || ''}`,
         label: `📘 Block: ${block?.title || blockId}`,
         link: `ch${chId}`,
         blockAnchor: blockId
@@ -46,21 +47,27 @@ export default function ReviewLaterView({ chapters, exam, onNavigate }) {
       const qIdx = Number(chQ[2]);
       const ch = chapters.find((c) => c.id === chId);
       const q = ch?.questions[qIdx];
+      const owner = units.find((u) => u.chapters.some((c) => c.id === chId));
       return {
-        group: ch?.title || `Chapter ${chId}`,
+        group: `${owner ? owner.label + ' · ' : ''}Ch ${chId} — ${ch?.title || ''}`,
         label: `❓ Q${qIdx + 1}: ${(q?.q || '').slice(0, 80)}${q && q.q.length > 80 ? '…' : ''}`,
         link: `ch${chId}`
       };
     }
-    const ex = key.match(/^studyguide:exam:q(\d+)$/);
-    if (ex) {
-      const qIdx = Number(ex[1]);
-      const q = exam[qIdx];
-      return {
-        group: 'Practice Exam',
-        label: `🎯 Exam Q${qIdx + 1}: ${(q?.q || '').slice(0, 80)}${q && q.q.length > 80 ? '…' : ''}`,
-        link: 'exam'
-      };
+    // Exam notes, across every unit (each unit has its own key prefix).
+    for (const u of units) {
+      if (!u.exam || !u.examPrefix) continue;
+      if (!key.startsWith(u.examPrefix)) continue;
+      const tail = key.slice(u.examPrefix.length);
+      if (/^\d+$/.test(tail)) {
+        const qIdx = Number(tail);
+        const q = u.exam[qIdx];
+        return {
+          group: `${u.label} — Practice Exam`,
+          label: `🎯 Exam Q${qIdx + 1}: ${(q?.q || '').slice(0, 80)}${q && q.q.length > 80 ? '…' : ''}`,
+          link: `exam:${u.id}`
+        };
+      }
     }
     return { group: 'Other', label: key, link: null };
   };
