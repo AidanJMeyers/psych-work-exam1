@@ -3,7 +3,7 @@
 export default {
   summary: {
     title: 'Chapter 8 — Comprehensive Summary',
-    wordCount: 1200,
+    wordCount: 2375,
     paragraphs: [
       'Organizations invest enormous sums in training: US organizations spent an estimated $83 billion in 2019, the average employer spent over $1,200 per employee in 2018, and investment is growing six to ten percent annually in countries such as Brazil where the practice is less established. Much of that money appears to be well spent, since training and development demonstrably benefit individuals, teams, organizations, and even society. Yet the chapter opens on a tension it never fully resolves: industrial and organizational psychologists now know a great deal about what makes training work, but organizational practice routinely ignores that knowledge. Salas and colleagues identified best practices — conduct a training needs assessment before beginning, match the type of training to the workers, and ensure the training translates into changed job performance — and the chapter observes bluntly that knowing which practices work does not mean organizations follow them. Many skip the needs assessment entirely, which raises the question the chapter poses directly: how do we know the money spent on training is being put to good use? Underlying all of this is a prior strategic decision, namely whether to buy skilled workers outright or hire people who will need training, each with its own tradeoffs. The chapter organizes itself around a four-step process: conduct a training needs assessment, consider the characteristics of the trainees and the context, choose and administer a training method, and conduct a training evaluation.',
 

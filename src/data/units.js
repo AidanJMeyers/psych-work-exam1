@@ -4,6 +4,7 @@ import ch3 from '../chapters/ch03_job_analysis.jsx';
 import ch4 from '../chapters/ch04_criterion_measures.jsx';
 import ch6 from '../chapters/ch06_personnel_selection.jsx';
 import ch8 from '../chapters/ch08_training_development.jsx';
+import ch9 from '../chapters/ch09_work_motivation.jsx';
 import { exam as exam1 } from './exam.js';
 
 /**
@@ -39,11 +40,11 @@ export const units = [
     id: 'exam2',
     label: 'Exam 2',
     title: 'Exam 2 — Training, Motivation & Organizational Psychology',
-    blurb: 'Building out now. Chapter 8 is complete; remaining chapters will be added as the material is covered.',
-    chapterLabel: 'Chapter 8 (more coming)',
+    blurb: 'Building out now. Chapters 8 and 9 are complete; 10 through 14 are added as the material is covered.',
+    chapterLabel: 'Chapters 8–9 of 8–14',
     accent: 'emerald',
     inProgress: true,
-    chapters: [ch8],
+    chapters: [ch8, ch9],
     // No practice exam yet — it will be written once the chapter set is final.
     exam: null,
     examPrefix: 'studyguide:exam2:q',

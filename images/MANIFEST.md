@@ -190,3 +190,46 @@ PDF (no vector or raster objects), so its region was rendered directly by boundi
 | ch08_p299_Figure_8_5.png | ch08_training_development/08f_fig8-5_smart_goals.png | p.299 | Figure 8.5 - SMART goals in training; anchors 'Trainee Motivation' |
 | ch08_p303_Figure_8_6.png | ch08_training_development/08g_fig8-6_decay_of_learning.png | p.303 | Figure 8.6 - decay of learning over time (baseline, post-training, six months); anchors 'Learning Principles' |
 | ch08_p315_Figure_8_7.png | ch08_training_development/08h_fig8-7_kirkpatrick_four_levels.png | p.315 | Figure 8.7 - Kirkpatrick's four levels of training criteria; anchors 'Evaluating Training' |
+
+---
+
+## Chapter 9 — Work Motivation (`ch09_work_motivation/`)
+
+PDF pages 338–372. All 13 numbered figures in the chapter were extracted and all 13
+are placed in a study block — no orphans, nothing unused.
+
+| File | Source | Figure |
+|---|---|---|
+| `09a_fig9-1_performance_equation.png` | p. 339 | Figure 9.1 — Performance is the sum of motivation, ability, and environment |
+| `09b_fig9-2_maslow_hierarchy.png` | p. 342 | Figure 9.2 — Maslow's hierarchy as a pyramid |
+| `09c_fig9-3_erg_vs_maslow.png` | p. 343 | Figure 9.3 — ERG's three needs against Maslow's five |
+| `09d_fig9-4_hygiene_vs_motivators.png` | p. 344 | Figure 9.4 — Hygiene factors vs. motivators |
+| `09e_fig9-5_motivation_regulation_spectrum.png` | p. 346 | Figure 9.5 — The motivation regulation spectrum |
+| `09f_fig9-6_equity_ratio.png` | p. 349 | Figure 9.6 — The equity ratio comparison |
+| `09g_fig9-7_entitleds_benevolents.png` | p. 349 | Figure 9.7 — Entitleds and benevolents |
+| `09h_fig9-8_expectancy_vie.png` | p. 353 | Figure 9.8 — Expectancy, instrumentality, valence |
+| `09i_fig9-9_job_characteristics_model.png` | p. 357 | Figure 9.9 — The job characteristics model |
+| `09j_fig9-10_mps_formula.png` | p. 358 | Figure 9.10 — The Motivating Potential Score formula |
+| `09k_fig9-11_reinforcement_types.png` | p. 361 | Figure 9.11 — The reinforcement 2×2 |
+| `09l_fig9-12_reinforcement_schedules.png` | p. 362 | Figure 9.12 — Reinforcement schedule examples |
+| `09m_fig9-13_theory_summary.png` | p. 365 | Figure 9.13 — Summary of work motivation theories |
+
+### Extraction notes
+
+Four figures needed hand-built clips rather than the vector-cluster pass:
+
+- **Figure 9.10** (MPS formula) is a text diagram with only a fraction rule as
+  vector art, so the cluster filter dropped it — same situation as Figure 8.3.
+  Clipped from its text bounding box instead.
+- **Figure 9.4** extracted as two separate halves (one per column). Re-clipped as a
+  single region covering both header bars, photos, and bullet lists.
+- **Figures 9.6 and 9.7** share one page and were split across clusters; each was
+  re-clipped from its own drawing bounds, widened so the arrowheads are not cut off.
+- **Figure 9.2** initially absorbed a sliver of the caption column and, on a second
+  attempt, a paragraph of body text. Final clip stops at x=385 to exclude the margin
+  caption and at y=352 to exclude the following paragraph.
+
+The self-assessment boxes on pp. 347 and 350 (Rate Your Motivation, Rate Your Equity
+Preference) were extracted but are not used — they are full-page survey instruments
+rather than pedagogical figures, and their scoring bands are captured in the study
+blocks as text.

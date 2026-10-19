@@ -6,5 +6,6 @@ dist/
 .env.local
 images/00_extracted_raw/
 images/00_extracted_raw_ch08/
+images/00_extracted_raw_ch09/
 images/unused/
 .claude/
