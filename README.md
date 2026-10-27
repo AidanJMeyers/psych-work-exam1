@@ -27,15 +27,17 @@ Chapters 1–4 and 6.
 
 ## Exam 2 — Training, Motivation & Organizational Psychology
 
-In progress. The final exam covers **Chapters 8–14**. Chapters 8 and 9 are complete;
-10 through 14 are added as the material is covered, and the Exam 2 practice exam is
-written once the chapter set is final.
+In progress. The final exam covers **Chapters 8–14**. Chapters 8 through 11 are
+complete; 12 through 14 are added as the material is covered, and the Exam 2
+practice exam is written once the chapter set is final.
 
 | Chapter | Title | Study blocks | Vocab terms | Practice questions |
 |---|---|---:|---:|---:|
 | 8 | Training and Development | 11 | 52 | 76 |
 | 9 | Work Motivation | 12 | 74 | 100 |
-| | **Totals** | **23** | **126** | **176** |
+| 10 | Leadership at Work | 11 | 40 | 91 |
+| 11 | Job Attitudes and Emotions at Work | 9 | 39 | 72 |
+| | **Totals** | **43** | **205** | **339** |
 
 **Every question is multiple choice**, matching the exam format.
 
@@ -75,7 +77,7 @@ under `studyguide:` keys. Each section's reset button clears only its own keys;
 
 ## Images
 
-88 figures and tables were rendered directly from the textbook PDF's own page
+102 figures and tables were rendered directly from the textbook PDF's own page
 vectors at 3× zoom, so they are the book's original artwork rather than
 recreations. See [`images/MANIFEST.md`](images/MANIFEST.md) for the full accounting
 — every extracted image is either placed in a chapter block or logged with a reason

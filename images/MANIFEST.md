@@ -233,3 +233,63 @@ The self-assessment boxes on pp. 347 and 350 (Rate Your Motivation, Rate Your Eq
 Preference) were extracted but are not used — they are full-page survey instruments
 rather than pedagogical figures, and their scoring bands are captured in the study
 blocks as text.
+
+---
+
+## Chapter 10 — Leadership at Work (`ch10_leadership_work/`)
+
+PDF pages 378–412. All 6 numbered figures extracted and placed; no orphans.
+
+| File | Source | Figure |
+|---|---|---|
+| `10a_fig10-1_bases_of_power.png` | p. 381 | Figure 10.1 — French and Raven's six bases of power |
+| `10b_fig10-2_path_goal_predictions.png` | p. 391 | Figure 10.2 — Summary predictions of path-goal theory |
+| `10c_fig10-3_vroom_normative_model.png` | p. 393 | Figure 10.3 — Vroom's normative model decision tree |
+| `10d_fig10-4_transformational_transactional.png` | p. 394 | Figure 10.4 — Transformational and transactional leader behaviors |
+| `10e_fig10-5_lmx_antecedents_consequences.png` | p. 397 | Figure 10.5 — Antecedents and consequences of LMX quality |
+| `10f_fig10-6_servant_leadership.png` | p. 400 | Figure 10.6 — Characteristics of servant leaders |
+
+## Chapter 11 — Job Attitudes and Emotions at Work (`ch11_job_attitudes_emotions/`)
+
+PDF pages 421–452. All 8 numbered figures extracted and placed; no orphans.
+
+| File | Source | Figure |
+|---|---|---|
+| `11a_fig11-1_attitude_components.png` | p. 423 | Figure 11.1 — Components of job attitudes |
+| `11b_fig11-2_theory_planned_behavior.png` | p. 424 | Figure 11.2 — Theory of planned behavior |
+| `11c_fig11-3_satisfaction_scale_items.png` | p. 427 | Figure 11.3 — Sample items from job satisfaction scales (MSQ and JDI) |
+| `11d_fig11-4_faces_scale.png` | p. 428 | Figure 11.4 — The faces scale |
+| `11e_fig11-5_commitment_measures.png` | p. 429 | Figure 11.5 — Measurement of organizational commitment (OCQ and multidimensional) |
+| `11f_fig11-6_three_types_commitment.png` | p. 429 | Figure 11.6 — Three types of organizational commitment |
+| `11g_fig11-7_attitude_antecedents_consequences.png` | p. 431 | Figure 11.7 — Antecedents and consequences of job attitudes |
+| `11h_fig11-8_exit_voice_loyalty_neglect.png` | p. 440 | Figure 11.8 — Exit, Voice, Loyalty, Neglect model |
+
+### Extraction notes for Ch. 10 and Ch. 11
+
+Every figure in both chapters needed a hand-built clip; the generic vector-cluster
+pass produced nothing usable on its own. Two distinct reasons:
+
+- **Most of these figures are text-heavy tables and trees.** Figures 10.1, 10.2,
+  10.3, 10.4, 11.3 and 11.5 are tables whose only vector content is rule lines, so
+  the cluster pass either dropped them below the size filter or captured the rules
+  without the text. Each was clipped from measured drawing + text-block bounds.
+- **Figure 11.1 is a single raster image**, not vector art at all (one image object
+  at [158, 90, 419, 293]), which is why the drawing-based pass found nothing on
+  p. 423. It was clipped from the image rect directly.
+
+Contamination fixes, all found by visual inspection rather than by the extractor:
+
+- **Figure 10.1** initially pulled in the left-hand glossary margin column and a
+  line of body text; re-clipped to x 120–455.
+- **Figure 10.4** lost its "Transformational leaders" / "Transactional leaders" row
+  labels (they sit at x≈61, left of the table) and caught the caption below;
+  re-clipped to x 56–382, y 416–650.
+- **Figure 11.2** was missing the "Control (can I do it?)" box entirely and cut the
+  Behavior box on the right; the three input boxes span y 480–625, not 480–575.
+- **Figure 11.1** first attempt cut the bars, second attempt pulled in slivers of
+  the adjacent thumbnail photos — resolved by using the image object's own rect.
+- **Figure 10.3** (Vroom's decision tree) initially clipped the "TIME-DRIVEN MODEL"
+  header; y0 moved from 95 to 86.
+
+Figures 11.5 and 11.6 share page 429 and were split at y≈472, between the two
+captions.
