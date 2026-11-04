@@ -293,3 +293,37 @@ Contamination fixes, all found by visual inspection rather than by the extractor
 
 Figures 11.5 and 11.6 share page 429 and were split at y≈472, between the two
 captions.
+
+---
+
+## Chapters 12–14 (Exam 2, second half)
+
+| Directory | Figures | Covers |
+|---|---:|---|
+| `ch12_stress_ohp/` | 7 | GAS, job demands–resources, stressor antecedents, the stress–performance inverted U, exercise types, recovery opportunities, safety antecedents |
+| `ch13_teams_at_work/` | 11 | Tuckman's stages, punctuated equilibrium, team types, the effectiveness model, Mumford's role typology, team leadership 2×2, conflict–performance, cohesion × norms, the six decision steps, groupthink symptoms, avoiding groupthink |
+| `ch14_structure_culture_change/` | 9 | Functional and product departmentalization, the matrix, the Competing Values Framework, Schein's levels of culture, ASA, OD interventions, Lewin's three stages, Kotter's eight steps |
+
+Same extraction method as Chapters 8–11: per-page drawing, image and text-block
+bounds were dumped first, clips were built from those measurements, and **every
+clip was inspected visually** before being accepted. The generic vector-cluster
+pass remains unreliable here for the same reason — most of these are text-heavy
+tables and trees whose only vector content is rule lines.
+
+Contamination fixes caught by visual inspection:
+
+- **Figure 12.2** (job demands–resources) was cut on three sides on the first
+  pass, and the second pass trailed an orphaned "Interactive:" line below the
+  balance beam.
+- **Figure 13.4** (team effectiveness factors) was cut on the left and bottom,
+  dropping part of the group-composition column.
+- **Figure 14.7** (levels of culture) was badly cut on the first attempt and then
+  intruded on body text on the second; re-clipped to the three-level diagram only.
+- **Figure 14.12** (Kotter's eight steps) cut the last line of step 8.
+
+Figures 14.3 and 14.4 (the JP Morgan Chase and Marriott hybrid charts) are
+described in the Chapter 14 text but were not extracted — 14.1 and 14.2 already
+carry the functional and product cases, and the hybrids add no new structure type.
+Figure 14.9 (the culture-influences summary) is reproduced as a table in the
+chapter rather than as an image, because its page layout interleaves the figure
+with photo captions that cannot be cleanly excluded.

@@ -20,6 +20,9 @@ export default defineConfig({
           if (id.includes('/src/chapters/ch09')) return 'ch09';
           if (id.includes('/src/chapters/ch10')) return 'ch10';
           if (id.includes('/src/chapters/ch11')) return 'ch11';
+          if (id.includes('/src/chapters/ch12')) return 'ch12';
+          if (id.includes('/src/chapters/ch13')) return 'ch13';
+          if (id.includes('/src/chapters/ch14')) return 'ch14';
           if (id.includes('/src/data/exam')) return 'exam';
         }
       }

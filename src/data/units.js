@@ -7,6 +7,9 @@ import ch8 from '../chapters/ch08_training_development.jsx';
 import ch9 from '../chapters/ch09_work_motivation.jsx';
 import ch10 from '../chapters/ch10_leadership_work.jsx';
 import ch11 from '../chapters/ch11_job_attitudes_emotions.jsx';
+import ch12 from '../chapters/ch12_stress_ohp.jsx';
+import ch13 from '../chapters/ch13_teams_at_work.jsx';
+import ch14 from '../chapters/ch14_structure_culture_change.jsx';
 import { exam as exam1 } from './exam.js';
 
 /**
@@ -42,11 +45,10 @@ export const units = [
     id: 'exam2',
     label: 'Exam 2',
     title: 'Exam 2 — Training, Motivation & Organizational Psychology',
-    blurb: 'Building out now. Chapters 8 through 11 are complete; 12 through 14 are added as the material is covered.',
-    chapterLabel: 'Chapters 8–11 of 8–14',
+    blurb: 'Training and development, work motivation, leadership, job attitudes and emotions, stress and occupational health, teams, and organizational structure, culture, and change.',
+    chapterLabel: 'Chapters 8–14',
     accent: 'emerald',
-    inProgress: true,
-    chapters: [ch8, ch9, ch10, ch11],
+    chapters: [ch8, ch9, ch10, ch11, ch12, ch13, ch14],
     // No practice exam yet — it will be written once the chapter set is final.
     exam: null,
     examPrefix: 'studyguide:exam2:q',
