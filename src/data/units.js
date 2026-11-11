@@ -11,6 +11,7 @@ import ch12 from '../chapters/ch12_stress_ohp.jsx';
 import ch13 from '../chapters/ch13_teams_at_work.jsx';
 import ch14 from '../chapters/ch14_structure_culture_change.jsx';
 import { exam as exam1 } from './exam.js';
+import { exam as exam2 } from './exam2.js';
 
 /**
  * A "unit" is one exam's worth of the course. The dashboard is a course hub:
@@ -49,12 +50,11 @@ export const units = [
     chapterLabel: 'Chapters 8–14',
     accent: 'emerald',
     chapters: [ch8, ch9, ch10, ch11, ch12, ch13, ch14],
-    // No practice exam yet — it will be written once the chapter set is final.
-    exam: null,
+    exam: exam2,
     examPrefix: 'studyguide:exam2:q',
     examConfig: {
       subject: 'PSY 319 · Exam 2',
-      totalQuestions: 0,
+      totalQuestions: exam2.length,
       timed: true,
       timeLimitMin: 75,
       passThreshold: 80

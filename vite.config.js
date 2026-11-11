@@ -23,6 +23,7 @@ export default defineConfig({
           if (id.includes('/src/chapters/ch12')) return 'ch12';
           if (id.includes('/src/chapters/ch13')) return 'ch13';
           if (id.includes('/src/chapters/ch14')) return 'ch14';
+          if (id.includes('/src/data/exam2')) return 'exam2';
           if (id.includes('/src/data/exam')) return 'exam';
         }
       }

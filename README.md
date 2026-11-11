@@ -27,8 +27,8 @@ Chapters 1–4 and 6.
 
 ## Exam 2 — Training, Motivation & Organizational Psychology
 
-The final exam covers **Chapters 8–14**, and all seven chapters are complete.
-The Exam 2 practice exam is written once the chapter set has been reviewed.
+The final exam covers **Chapters 8–14**. All seven chapters are complete, and
+the Exam 2 practice exam is written: **107 questions**, 75 minutes, 80% to pass.
 
 | Chapter | Title | Study blocks | Vocab terms | Practice questions |
 |---|---|---:|---:|---:|
