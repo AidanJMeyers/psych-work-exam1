@@ -55,6 +55,7 @@ export default {
   ],
 
   vocab: [
+    { term: 'Nomological network', tag: 'Framework', tagColor: 'violet', def: 'A framework showing how a psychological construct is related — both theoretically and empirically — to other constructs. For job attitudes: ANTECEDENTS (job characteristics, leadership, stress, perceived organizational support, justice, personality, person-environment fit) → ATTITUDES (satisfaction, commitment) → OUTCOMES (performance, OCBs, counterproductive work behavior, absenteeism, turnover, unit performance).' },
     { term: 'Job attitudes', tag: 'Core', tagColor: 'sky', def: 'Feelings and beliefs about one’s job, organization, supervisor, or another aspect of the workplace.' },
     { term: 'Cognitive dissonance', tag: 'Core', tagColor: 'sky', def: 'Discomfort experienced when attitudes and behaviors are NOT ALIGNED. It poses a threat to one’s self-image, so people rationalize, suppress, or change one side.' },
     { term: 'Theory of planned behavior', tag: 'Core', tagColor: 'sky', def: 'Ajzen (1991): behavior is a function of INTENTIONS, which come from ATTITUDE, NORMS (is it appropriate?), and CONTROL (can I do it?).' },
@@ -102,6 +103,7 @@ export default {
   ],
 
   laws: [
+    { name: 'Performance → satisfaction is the STRONGER direction', desc: 'The arrow is usually drawn satisfaction → performance, but the reverse path is stronger. Performing well generates pride, rewards, and a felt sense of competence; merely being happy gives only a slight productivity boost. If asked which way causality runs, lead with performance as the antecedent.' },
     { name: 'Attitudes have three parts', desc: 'COGNITIVE (beliefs), AFFECTIVE (emotions), BEHAVIORAL (intentions). This structure is WHY attitudes relate to behavior at all — the behavioral component is already an intention.' },
     { name: 'We align attitudes and behavior — or feel dissonance', desc: 'Cognitive dissonance is the discomfort when they do not match. Doing favors for a manager you dislike is stressful, so we rationalize ("he is really not so bad…") rather than live with it.' },
     { name: 'Attitude and behavior must MATCH IN TARGET', desc: 'Ajzen & Fishbein (1977): attitudes toward your MANAGER predict actions toward that manager, but weakly predict favors for a COWORKER. Do not expect loving one part of a job to produce all kinds of positive behaviors.' },

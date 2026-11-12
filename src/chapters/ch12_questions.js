@@ -949,5 +949,59 @@ export default [
     correct: 2,
     difficulty: "H",
     explanation: "The chapter notes trucking is a sedentary job, and that long-haul trucker health is considered crucial to their safety on the road."
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "In Lazarus's transactional model, a nurse asked to perform an unfamiliar procedure first thinks 'this could go badly for the patient,' then thinks 'but I have done the adjacent procedure and the attending is down the hall.' These two judgments are, in order:",
+    type: 'mcq',
+    choices: [
+      "Primary appraisal, then secondary appraisal",
+      "Secondary appraisal, then primary appraisal",
+      "Alarm, then resistance",
+      "Challenge appraisal, then hindrance appraisal"
+    ],
+    correct: 0,
+    difficulty: "M",
+    explanation: "Primary appraisal evaluates the EVENT - is this threatening, harmful, or challenging? Secondary appraisal evaluates the SELF - do I have the resources to cope? Two people facing one stressor can diverge at either step."
+  },
+  {
+    q: "Conservation of resources theory, as Hobfoll developed it, makes which claim about gains and losses?",
+    type: 'mcq',
+    choices: [
+      "Gains and losses of resources have symmetric effects on strain",
+      "Losing a resource has a STRONGER impact than gaining an equivalent one, and the resource-rich cope better with future stressors",
+      "Only the absolute level of resources matters, not changes in it",
+      "Resource gains predict strain while resource losses predict engagement"
+    ],
+    correct: 1,
+    difficulty: "M",
+    explanation: "COR is workplace-specific: people seek to obtain, protect, and build resources such as time, energy, money, social support, and self-esteem. Losing a job costs income, but also status, social connection, and security - which is why the loss lands so hard."
+  },
+  {
+    q: "The job demands-resources model proposes two distinct pathways. They are:",
+    type: 'mcq',
+    choices: [
+      "A short-term pathway and a long-term pathway, both driven by demands",
+      "An appraisal pathway and a coping pathway",
+      "A HEALTH IMPAIRMENT process (high demands to strain to burnout) and a MOTIVATIONAL process (high resources to engagement to performance)",
+      "A physiological pathway and a behavioral pathway"
+    ],
+    correct: 2,
+    difficulty: "M",
+    explanation: "The model's central insight is that demands and resources operate through SEPARATE processes rather than sitting at two ends of one continuum. A nurse with a heavy workload need not burn out if staffing, autonomy, and supervisor support are in place."
+  },
+  {
+    q: "Which list correctly captures the recovery opportunities organizations can provide or encourage?",
+    type: 'mcq',
+    choices: [
+      "Sabbaticals, vacations, and personal days only - shorter breaks do not aid recovery",
+      "Flexible scheduling, remote work, and compressed workweeks",
+      "Employee assistance programs, wellness programs, and gym reimbursement",
+      "Sabbaticals, vacations, personal days, evenings, naps, and micro breaks"
+    ],
+    correct: 3,
+    difficulty: "M",
+    explanation: "Recovery runs from months down to minutes - evenings, naps, and micro breaks count alongside sabbaticals. Flexible work arrangements and employee resource programs are the OTHER two organizational approaches, not recovery opportunities."
+  },
 ];

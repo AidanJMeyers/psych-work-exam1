@@ -1300,5 +1300,20 @@ export default [
     correct: 2,
     difficulty: 'M',
     explanation: 'Unintended consequences is the chapter’s own closing word of caution, given the complexities of both the modern workplace and the science of human motivation.'
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "A support rep begins writing the team's onboarding documentation because she enjoys writing, and starts describing her role as 'helping new hires succeed' rather than 'closing tickets.' Nobody assigned this. This is:",
+    type: 'mcq',
+    choices: [
+      "Job enlargement, because her duties expanded horizontally",
+      "Job rotation, because she is working outside her usual role",
+      "Job crafting, because SHE reshaped both the tasks and how she perceives the work",
+      "Job enrichment, because her authority over the work increased"
+    ],
+    correct: 2,
+    difficulty: "M",
+    explanation: "Crafting is the bottom-up redesign move: the employee proactively changes tasks, relationships, or their perception of the work. Enlargement and enrichment are designed by management, and rotation moves you between jobs."
+  },
 ];

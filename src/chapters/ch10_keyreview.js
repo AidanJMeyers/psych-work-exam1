@@ -53,6 +53,7 @@ export default {
   ],
 
   vocab: [
+    { term: 'Development assignments', tag: 'Development', tagColor: 'green', def: 'Placing managers in positions where they acquire the skills and knowledge needed for a higher-level role — an overseas assignment, or managing a different team. Used by Nike, GE, and Coca-Cola. Distinct from 360 feedback, coaching, and mentoring, which develop a manager in place.' },
     { term: 'Leadership', tag: 'Core', tagColor: 'sky', def: 'The process of influencing the way others act, their perceptions, and how they view their environment through COOPERATION. Jago (1982): the use of NON-COERCIVE means to ensure group tasks are accomplished.' },
     { term: 'Power', tag: 'Core', tagColor: 'sky', def: 'The ability to influence or control the behavior of others. Leadership involves influencing through bases of power that are NOT coercive.' },
     { term: 'Coercive power', tag: 'Power', tagColor: 'red', def: 'The ability to use FORCE to gain compliance from another. Formal-position based.' },

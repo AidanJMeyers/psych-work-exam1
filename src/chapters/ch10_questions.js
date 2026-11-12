@@ -1183,5 +1183,20 @@ export default [
     correct: 2,
     difficulty: 'M',
     explanation: 'Effective leaders read the situation and modify their behavior, so "developing the flexibility to demonstrate the particular behaviors required by the context is essential."'
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "360 feedback takes its name from the fact that it gathers information from:",
+    type: 'mcq',
+    choices: [
+      "A full year of performance data, reviewed quarter by quarter",
+      "The manager's own self-ratings across every competency",
+      "Subordinates, colleagues, AND higher-level managers, presented back to the focal manager",
+      "External customers and stakeholders rather than internal raters"
+    ],
+    correct: 2,
+    difficulty: "E",
+    explanation: "It views the manager from every direction. The chapter pairs it with coaching - which motivates a manager to change and shows them how - and with mentoring, which teaches workplace norms and helps with problems."
+  },
 ];

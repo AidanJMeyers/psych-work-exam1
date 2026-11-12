@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import StudyBlock, { confidenceColors } from './StudyBlock.jsx';
 import QuestionItem from './QuestionItem.jsx';
 import KeyReview from './KeyReview.jsx';
+import LectureEmphasis from './LectureEmphasis.jsx';
 import ResetSectionButton from './ResetSectionButton.jsx';
+import lectureEmphasis from '../data/lectureEmphasis.js';
 import { storage } from '../storage';
 
 const SUBTABS = [
   { id: 'study', label: 'Study Guide' },
   { id: 'review', label: 'Key Review' },
+  { id: 'slides', label: 'Prof’s Slides' },
   { id: 'practice', label: 'Practice Questions' }
 ];
 
@@ -66,6 +69,12 @@ export default function ChapterView({ chapter }) {
             }`}
           >
             {t.label}
+            {t.id === 'slides' && lectureEmphasis[chapter.id] && (
+              <span
+                className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 align-middle"
+                title="Her lecture deck is loaded for this chapter"
+              />
+            )}
           </button>
         ))}
       </div>
@@ -107,6 +116,8 @@ export default function ChapterView({ chapter }) {
       )}
 
       {subtab === 'review' && <KeyReview keyReview={chapter.keyReview} />}
+
+      {subtab === 'slides' && <LectureEmphasis chapterId={chapter.id} />}
 
       {subtab === 'practice' && (
         <div>

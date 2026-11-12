@@ -30,22 +30,25 @@ Chapters 1–4 and 6.
 The final exam covers **Chapters 8–14**. All seven chapters are complete, and
 the Exam 2 practice exam is written: **107 questions**, 75 minutes, 80% to pass.
 
+All seven chapters have also been audited against the professor's own lecture
+decks — see the **Prof's Slides** tab.
+
 | Chapter | Title | Study blocks | Vocab terms | Practice questions |
 |---|---|---:|---:|---:|
-| 8 | Training and Development | 11 | 52 | 76 |
-| 9 | Work Motivation | 12 | 74 | 100 |
-| 10 | Leadership at Work | 11 | 40 | 91 |
-| 11 | Job Attitudes and Emotions at Work | 9 | 39 | 72 |
-| 12 | Stress and Occupational Health Psychology | 9 | 43 | 73 |
-| 13 | Teams at Work | 9 | 37 | 104 |
-| 14 | Organizational Structure, Culture, and Change | 10 | 44 | 129 |
-| | **Totals** | **71** | **329** | **645** |
+| 8 | Training and Development | 11 | 52 | 77 |
+| 9 | Work Motivation | 12 | 75 | 101 |
+| 10 | Leadership at Work | 11 | 41 | 92 |
+| 11 | Job Attitudes and Emotions at Work | 9 | 40 | 75 |
+| 12 | Stress and Occupational Health Psychology | 9 | 47 | 77 |
+| 13 | Teams at Work | 9 | 37 | 105 |
+| 14 | Organizational Structure, Culture, and Change | 10 | 44 | 130 |
+| | **Totals** | **71** | **336** | **657** |
 
 **Every question is multiple choice**, matching the exam format.
 
 ---
 
-## Per chapter, three sub-tabs
+## Per chapter, four sub-tabs
 
 1. **Study Guide** — every block leads with the textbook's own figure or table
    (rendered directly from the PDF, not recreated), followed by expanded
@@ -55,7 +58,14 @@ the Exam 2 practice exam is written: **107 questions**, 75 minutes, 80% to pass.
    (~1,100–1,250 words, with a Copy button) written as a base for weekly overview
    papers, followed by the numbers worth memorizing, the full vocabulary list,
    principles and rules, and mnemonics.
-3. **Practice Questions** — MCQs with per-question submit, running score,
+3. **Prof's Slides** — a lecture-emphasis layer built by reading her seven
+   Chapter 8–14 decks (304 slides) end to end and lining them up against the
+   textbook. Four sections: the topics she gave dedicated slides to (with slide
+   numbers), her in-class activities and their answers, the figures she put on a
+   slide, and the textbook topics that are **not** on her slides. A green dot on
+   the tab means a deck is loaded for that chapter. Exam 1 chapters have no decks
+   on file yet and show a placeholder.
+4. **Practice Questions** — MCQs with per-question submit, running score,
    difficulty chips, detailed explanations on submit, and a note box. A **Reset
    answers** button clears just that chapter's practice answers.
 

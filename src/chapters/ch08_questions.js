@@ -913,5 +913,20 @@ export default [
     correct: 0,
     difficulty: 'H',
     explanation: 'The learning happened; the transfer did not. This is precisely the gap between Kirkpatrick Levels 2 and 3, and it is the nursing medication-verification example in the chapter.'
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "Kalinoski et al. (2014) meta-analyzed diversity training. Which outcomes improved, and what was distinctive about training built around social interaction?",
+    type: 'mcq',
+    choices: [
+      "Cognitive outcomes only; social interaction made no measurable difference",
+      "Affective outcomes only; social interaction weakened them",
+      "Skill-based outcomes only; social interaction improved knowledge instead",
+      "Affective, skill-based AND cognitive outcomes; training using social interaction had greater effects on trainee AFFECT"
+    ],
+    correct: 3,
+    difficulty: "M",
+    explanation: "All three of Kraiger's domains improved. The social-interaction advantage is specifically about affect - trainees liked it more - not about knowledge or skill gains."
+  },
 ];

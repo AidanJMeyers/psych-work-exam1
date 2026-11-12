@@ -53,6 +53,10 @@ export default {
   ],
 
   vocab: [
+    { term: 'Primary appraisal', tag: 'Transactional', tagColor: 'amber', def: 'The first appraisal step: “Is this situation threatening, harmful, or challenging?” It evaluates the EVENT.' },
+    { term: 'Secondary appraisal', tag: 'Transactional', tagColor: 'amber', def: 'The second appraisal step: “Do I have the resources to cope with it?” It evaluates the SELF. Two people facing the same stressor diverge here as often as at primary appraisal.' },
+    { term: 'Health impairment process', tag: 'JD-R', tagColor: 'red', def: 'One of JD-R’s two pathways: high job DEMANDS → strain → burnout. The depleting route.' },
+    { term: 'Motivational process', tag: 'JD-R', tagColor: 'green', def: 'JD-R’s other pathway: high job RESOURCES → engagement → better performance. The building route. The model’s whole point is that demands and resources act through two SEPARATE processes, not one continuum.' },
     { term: 'Occupational health psychology (OHP)', tag: 'Core', tagColor: 'sky', def: 'A relatively new discipline primarily concerned with the health and safety of workers — both psychological and physical.' },
     { term: 'Well-being', tag: 'Core', tagColor: 'sky', def: 'A concept that includes workers’ HEALTH, SAFETY, SATISFACTION, and ENGAGEMENT.' },
     { term: 'Stress', tag: 'Core', tagColor: 'sky', def: 'The body’s reaction to a change that requires a physical, mental, or emotional adjustment or response.' },
@@ -124,6 +128,8 @@ export default {
   ],
 
   methods: [
+    { name: 'Primary then secondary', expand: 'Is it a threat? → Can I handle it?', desc: 'Lazarus’s two appraisal steps in order. Primary judges the event, secondary judges your resources. Stress is the output of both.' },
+    { name: 'JD-R’s two roads', expand: 'Demands → strain → burnout | Resources → engagement → performance', desc: 'Health impairment and motivational processes. A heavy workload need not burn a nurse out IF staffing, autonomy, and supervisor support are there — demands and resources run on different tracks.' },
     { name: 'A-R-E', expand: 'Alarm, Resistance, Exhaustion', desc: 'Selye’s GAS stages in order. Alarm = cortisol/adrenaline spike; Resistance = burning sugars then fats; Exhaustion = stores gone, body weakened.' },
     { name: 'The four stress models', expand: 'GAS → Transactional → COR → JDR', desc: 'Biology → appraisal → resources → demands-vs-resources. Each adds something the previous one missed.' },
     { name: 'Challenge vs. Hindrance', expand: 'Developmental vs. obstructive', desc: 'A tough client assignment is a challenge stressor; a confusing reimbursement system is a hindrance stressor. Both are stressful; only one builds you.' },

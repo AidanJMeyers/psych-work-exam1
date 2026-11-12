@@ -56,6 +56,7 @@ export default {
   ],
 
   vocab: [
+    { term: 'Job crafting', tag: 'Redesign', tagColor: 'violet', def: 'The process by which employees PROACTIVELY reshape their own job — changing tasks, relationships, or how they perceive the work — to better fit their strengths, interests, and values. Unlike rotation, enlargement, and enrichment, the change is driven by the EMPLOYEE, not designed by management. Appears again in Ch 12 as a way to build a healthy work environment.' },
     { term: 'Work motivation', tag: 'Core', tagColor: 'sky', def: 'A set of energetic forces that originate both within as well as beyond an individual to initiate work-related behavior and to determine its form, direction, intensity, and duration (Pinder, 2008).' },
     { term: 'Intrinsic motivation', tag: 'Core', tagColor: 'sky', def: 'Motivation that comes from inside the individual such that they are engaging in behavior because it is personally rewarding to them.' },
     { term: 'Extrinsic motivation', tag: 'Core', tagColor: 'sky', def: 'Motivation originating from outside the individual.' },
@@ -162,6 +163,7 @@ export default {
   ],
 
   methods: [
+    { name: 'The four redesign moves', expand: 'Rotation → Enlargement → Enrichment → Crafting', desc: 'Rotation moves you BETWEEN jobs; enlargement adds duties at the SAME level (horizontal); enrichment adds authority and control (vertical, the motivational one); crafting is the employee reshaping the job themselves. Only the last one is bottom-up.' },
     { name: 'SMART', expand: 'Specific, Measurable, Attainable, Relevant, Time-Bound', desc: 'Goal-setting’s core acronym. Attainable is glossed as "aggressive but achievable." Also appears in Ch. 8.' },
     { name: 'VIE', expand: 'Valence × Instrumentality × Expectancy', desc: 'Read the chain backwards from the reward: do I want it (V), will performing get it (I), will effort get me to perform (E)?' },
     { name: 'E-I-V in order of the arrow', expand: 'Effort → Performance → Reward', desc: 'Expectancy links effort to performance, instrumentality links performance to reward, valence is how much the reward is worth. Figure 9.8 draws it top to bottom.' },

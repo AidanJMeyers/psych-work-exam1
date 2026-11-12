@@ -1352,5 +1352,20 @@ export default [
     correct: 0,
     difficulty: "E",
     explanation: "The five recommendations: discuss the symptoms, use a rotating devil’s advocate, invite outside experts, encourage a culture of difference, and debate ethical implications. Choices B and D are groupthink CAUSES."
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "Of the six commonly held beliefs about teams the chapter examines, five are myths. Which one is only PARTLY true rather than a flat myth?",
+    type: 'mcq',
+    choices: [
+      "Harmony helps, because smooth interaction avoids time-wasting debate",
+      "It is good to mix it up, because new members bring energy and fresh ideas",
+      "Bigger is better, because larger groups bring more resources to the work",
+      "Teamwork is magical, so gathering talented people and stating the goal is enough"
+    ],
+    correct: 1,
+    difficulty: "H",
+    explanation: "New members genuinely do bring fresh ideas and guard against complacency - but too much turnover disrupts cohesion, trust, and efficiency, so the claim is qualified rather than wrong. The other three are straightforwardly myths, as are 'face-to-face is passe' and 'performance depends on the leader.'"
+  },
 ];

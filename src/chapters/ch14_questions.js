@@ -1677,5 +1677,20 @@ export default [
     correct: 2,
     difficulty: "M",
     explanation: "The chapter adds that organizations are also experimenting with co-CEOs — the UK firm Argentex and Swiss watch maker Oris — but we should not yet conclude a strong organizational hierarchy is obsolete."
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "An organization's climate can be specific to a focus area. Which of the following is a list of such climate types?",
+    type: 'mcq',
+    choices: [
+      "Mechanistic, organic, matrix, lattice, and virtual",
+      "Safety, diversity, customer service, empowerment, ethics, mistreatment, and justice",
+      "Adhocracy, market, clan, and hierarchy",
+      "Artifacts, espoused values, and basic underlying assumptions"
+    ],
+    correct: 1,
+    difficulty: "M",
+    explanation: "These are climates - shared PERCEPTIONS of policies, practices, and what gets rewarded - not culture types. Safety climate in particular belongs here: it is about whether employees believe safety rules matter, are followed, and can be raised without fear."
+  },
 ];

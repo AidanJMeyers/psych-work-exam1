@@ -936,5 +936,46 @@ export default [
     correct: 1,
     difficulty: 'M',
     explanation: 'That gap is exactly what emotional labor is — and surface acting, which maintains the gap, is the strategy linked to stress and fatigue.'
-  }
+  },
+
+  // --- added from the professor's lecture decks ---
+  {
+    q: "A nomological network is best described as:",
+    type: 'mcq',
+    choices: [
+      "A framework showing how a construct relates, both theoretically and empirically, to other constructs",
+      "A statistical correction applied to correlations attenuated by unreliability",
+      "A survey format that measures several job facets within one instrument",
+      "The web of coworkers an employee actually interacts with during a workday"
+    ],
+    correct: 0,
+    difficulty: "M",
+    explanation: "For job attitudes the network runs antecedents - job characteristics, leadership, stress, perceived organizational support, justice, personality, person-environment fit - into satisfaction and commitment, and out to performance, OCBs, counterproductive work behavior, absenteeism, turnover, and unit performance."
+  },
+  {
+    q: "Bauer and colleagues (2007) studied organizational newcomers. What did they conclude about structured onboarding?",
+    type: 'mcq',
+    choices: [
+      "It raised satisfaction but had no detectable effect on retention",
+      "It improves newcomers' attachment to and satisfaction with the organization, which in turn raises retention",
+      "It improved retention while temporarily lowering early job satisfaction",
+      "Its apparent effects disappeared once starting pay was controlled for"
+    ],
+    correct: 1,
+    difficulty: "M",
+    explanation: "The first few weeks are a critical period for adjustment and socialization, and whether newcomers feel supported during that window is what drives the downstream attachment and retention effects."
+  },
+  {
+    q: "The six basic categories of emotions are:",
+    type: 'mcq',
+    choices: [
+      "Anger, happiness, disgust, fear, sadness, surprise",
+      "Joy, trust, anticipation, anger, boredom, shame",
+      "Happiness, sadness, pride, guilt, envy, anger",
+      "Anger, fear, sadness, happiness, contempt, boredom"
+    ],
+    correct: 0,
+    difficulty: "M",
+    explanation: "Pride, guilt, envy, shame, contempt, and boredom are NOT among the six basic categories. Emotions are momentary and event-linked; moods have less clear causes and last longer."
+  },
 ];
